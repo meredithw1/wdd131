@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(207, 207, 207);
+}
+
+h1, h2, p, img {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color:blue;
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+}
