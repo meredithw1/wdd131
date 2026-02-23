@@ -1,0 +1,120 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        /* 2. The Main Form Grid (The "Red" Grid from your image) */
+        .formGrid {
+            display: grid;
+            /* 5 columns and 5 rows to allow for the offset overlap */
+            grid-template-columns: 100px 200px 100px 100px 50px;
+            grid-template-rows: 50px 100px 100px 50px 60px;
+            gap: 0; 
+            position: relative;
+        }
+
+        /* 3. Card Front Positioning */
+        #cardFront {
+            grid-column: 1 / 4; /* Spans first 3 columns */
+            grid-row: 1 / 4;    /* Spans first 3 rows */
+            z-index: 2;         /* Sits on top */
+            
+            background: #ddd;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            
+            /* Internal Grid for Front Card */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+        }
+
+        /* 4. Card Back Positioning */
+        #cardBack {
+            grid-column: 3 / 6; /* Starts at col 3, ends at col 6 */
+            grid-row: 2 / 5;    /* Starts at row 2, ends at row 5 */
+            z-index: 1;         /* Sits behind */
+            
+            background: #cfcfcf;
+            border-radius: 15px;
+            padding: 0; 
+            display: grid;
+            grid-template-rows: 40px 1fr; /* Space for the black strip */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 5. Internal Front Card Elements */
+        #total {
+            grid-column: 1 / 3;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        #cardNumber {
+            grid-column: 1 / 3;
+        }
+
+        #cardExpiration {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* 6. Internal Back Card Elements */
+        .blackStrip {
+            background: #000;
+            width: 100%;
+            height: 45px;
+            margin-top: 30px;
+        }
+
+        #cvc {
+            padding: 20px;
+            justify-self: end;
+            align-self: end;
+            text-align: right;
+        }
+
+        /* 7. Form Controls */
+        label {
+            display: block;
+            font-size: 0.75rem;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #month, #year {
+            width: 50px;
+        }
+
+        .submit {
+            grid-column: 4 / 5;
+            grid-row: 5;
+            height: 40px;
+            align-self: end;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+
+        .submit:hover {
+            background: #f9f9f9;
+            transform: translateY(-1px);
+        }
