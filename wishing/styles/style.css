@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.buttons {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+   border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #0f3460;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #533483;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.history {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.wish-item {
+  padding: 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.five-star { color: gold; }
+.four-star { color: violet; }
+.three-star { color: lightblue; }
